@@ -5,66 +5,82 @@
 <title>用户登录界面</title>
 </head>
 <body>
-		<table>
-			<!-- 第1行 -->
-			<tr>
-				<td colspan="3">1.会员登录名和密码</td>
-			</tr>
-			<!-- 第2行 -->
-			<tr>
-				<td>用户名：</td>
-				<td><input name="" type="text" size="8" /><span
-					style="color: red">*</span></td>
-				<td><input name="检测用户名" type="button" value="检测用户名" size="5" />
-					<span style="color: blue;">
-						&nbsp&nbsp5-15位，请使用英文（a-z,A-Z)、数字（0-9）</span>
-			</tr>
-			<!-- 第3行 -->
-			<tr>
-				<td>密码：</td>
-				<td><input name="" type="password" size="8" /><span
-					style="color: red">*</span></td>
-				<td><span style="color: blue;">&nbsp&nbsp5-15位，请使用英文（a-z,A-Z)、数字（0-9）</span></td>
-			</tr>
-			<!-- 第4行 -->
-			<tr>
-				<td>再次输入密码：</td>
-				<td><input name="" type="password" size="8" /><span
-					style="color: red">*</span></td>
-				<td><span style="color: blue;"> 两次输入的密码需要一致</span></td>
-			</tr>
-			<!--------------------------------------------------------------------->
-			<!-- 第5行 -->
-			<tr>
-				<td colspan="3">2.姓名和联系方式</td>
-			</tr>
-			<!-- 第6行 -->
-			<tr>
-				<td>真实姓名：</td>
-				<td><input name="text" type="text" size="8" /><span
-					style="color: red">*</span></td>
-				<td><input name="sex" type="radio" value="男">男&nbsp
-				<input name="sex" type="radio" value="女">女</td>
-			</tr>
-			<!-- 第7行 -->
-			<tr>
-				<td>电子邮箱：</td>
-				<td><input name="mail" type="text" size="8" /><span
-					style="color: red">*</span></td>
-				<td><span style="color: blue;">&nbsp&nbsp这是你和客户联系的重要途径</span></td>
-			</tr>
-			<!-- 第8行 -->
-			<tr>
-				<td>固定电话：</td>
-				<td><input name="tel" type="text" size="8" /><span
-					style="color: red">*</span></td>
-				<td><span style="color: blue;"> 区号+电话号码</span></td>
-			</tr>
-			<!-- 第9行 -->
-			<tr>
-				<td>公司所在地：</td>
-				<td> <input name="place" type="checkbox" size="6" maxlength="6"/></td>
-			</tr>
-		</table>
+	<table>
+		<!-- 第1行 -->
+		<tr>
+			<td colspan="3">1.会员登录名和密码</td>
+		</tr>
+		<!-- 第2行 -->
+		<tr>
+			<td>用户名：</td>
+			<td><input name="" type="text" size="8" /><span
+				style="color: red">*</span></td>
+			<td><input name="检测用户名" type="button" value="检测用户名" size="5" />
+				<span style="color: blue;">
+					&nbsp&nbsp5-15位，请使用英文（a-z,A-Z)、数字（0-9）</span>
+		</tr>
+		<!-- 第3行 -->
+		<tr>
+			<td>密码：</td>
+			<td><input name="" type="password" size="8" /><span
+				style="color: red">*</span></td>
+			<td><span style="color: blue;">&nbsp&nbsp5-15位，请使用英文（a-z,A-Z)、数字（0-9）</span></td>
+		</tr>
+		<!-- 第4行 -->
+		<tr>
+			<td>再次输入密码：</td>
+			<td><input name="" type="password" size="8" /><span
+				style="color: red">*</span></td>
+			<td><span style="color: blue;"> 两次输入的密码需要一致</span></td>
+		</tr>
+		<!--------------------------------------------------------------------->
+		<!-- 第5行 -->
+		<tr>
+			<td colspan="3">2.姓名和联系方式</td>
+		</tr>
+		<!-- 第6行 -->
+		<tr>
+			<td>真实姓名：</td>
+			<td><input name="text" type="text" size="8" /><span
+				style="color: red">*</span></td>
+			<td><input name="sex" type="radio" value="男">男&nbsp <input
+				name="sex" type="radio" value="女">女</td>
+		</tr>
+		<!-- 第7行 -->
+		<tr>
+			<td>电子邮箱：</td>
+			<td><input name="mail" type="text" size="8" /><span
+				style="color: red">*</span></td>
+			<td><span style="color: blue;">&nbsp&nbsp这是你和客户联系的重要途径</span></td>
+		</tr>
+		<!-- 第8行 -->
+		<tr>
+			<td>固定电话：</td>
+			<td><input name="tel" type="text" size="8" /><span
+				style="color: red">*</span></td>
+			<td><span style="color: blue;"> 区号+电话号码</span></td>
+		</tr>
+		<!-- 第9行 -->
+		<tr>
+			<td>公司所在地：</td>
+			<td><select name="city" size="1">
+					<!--size默认是1  -->
+					<option value="安徽">安徽</option>
+					<option value="江苏">江苏</option>
+					<option value="上海">上海</option>
+			</select></td>
+			<td><select name="city" size="1">
+					<!--size默认是1  -->
+					<option value="马鞍山">马鞍山</option>
+					<option value="合肥">合肥</option>
+					<option value="芜湖">芜湖</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input name="submit" type="submit" value="登录"/></td>
+			<td><input name="button" type="button" value="注册"/></td>
+		</tr>
+	</table>
 </body>
 </html>
