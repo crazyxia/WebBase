@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="confirm" onclick="cfm()" />
+	<input type="button" value="链接到百度"
+		onclick="location.href='http://www.baidu.com'" />
+	<input type="button" value="刷新界面" onclick="location.reload()" />
+	<input type="button" value="替换页面"
+		onclick="location.replace('register.html')" />
+</body>
+<script type="text/javascript">
+	/* 测试屏幕对象 
+	if (screen.witdth < 10000 || screen.colorDepth < 8000) {
+		var msg = "电脑太烂";
+		console.info(msg);
+	} */
+	function cfm() {
+		if (confirm("确定离开了吗？")) {
+			console.info("姚大远");
+			self.close();
+		} else {
+			return false;
+		}
+	}
+</script>
+</html>

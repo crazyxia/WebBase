@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="单击" onclick="CreateNewPara()" />
+	<div id="div1">
+		<p id="p1">这是个段落</p>
+		<p id="p2">这是另外一个段落</p>
+	</div>
+	<script type="text/javascript">
+		function CreateNewPara() {
+			var para = document.createElement("p");//
+			var node = document.createTextNode("这是一个新段落");
+			para.appendChild(node);
+			var element=document.getElementById("div1");
+			element.appendChild(para);
+		}
+	</script>
+</body>
+</html>
