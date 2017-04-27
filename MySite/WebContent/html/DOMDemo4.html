@@ -5,11 +5,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<input type="button" value="测试文件修改" onclick="changeText()">
-	<p id="p1">HelloWorld!</p>
+	<input type="button" value="改变颜色" onclick="changecolor()" />
+	<input type="button" value="改变字体" onclick="changefont()" />
+	<input type="button" value="改变大小" onclick="changesize()" />
+	<p id="p1">"Hello World"</p>
+	<p id="p2">"Hello World"</p>
 	<script type="text/javascript">
-		function changeText() {
-			document.getElementById("p1").innerHTML = "新文本";
+		function changecolor() {
+			document.getElementById("p1").style.color = "red";//修改颜色
+		}
+		function changefont() {
+			document.getElementById("p1").style.fontFamily = "楷体";//修改字体
+		}
+		function changesize() {
+			document.getElementById("p1").style.fontSize ="50px";//修改大小
 		}
 	</script>
 </body>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="div1">
+		<input type="button" value="增加文件" onclick="addNode()" />
+		<p id="p1">"Hello World"</p>
+		<p id="p2">"这是第二个Hello World"</p>
+	</div>
+	<script type="text/javascript">
+		function addNode() {
+			var para = document.createElement("p");//创建一对p标签
+			var node = document.createTextNode("你好中国");//创建一个新的文本节点
+			para.appendChild(node);//将文本节点放置到p标签中去
+			var element = document.getElementById("div1");//获取div标签对象
+			element.appendChild(para);//将新建的p标签及内容放置到div中
+		}
+	</script>
+</body>
+</html>
+
