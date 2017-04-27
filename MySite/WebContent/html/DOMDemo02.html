@@ -5,19 +5,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<input type="button" value="单击" onclick="CreateNewPara()" />
-	<div id="div1">
-		<p id="p1">这是个段落</p>
-		<p id="p2">这是另外一个段落</p>
+	<p>Hello World!</p>
+	<div id="main">
+		<p>DOM是非常有用的</p>
+		<p>
+			这个实例演示了<b>getElementByTagName</b>方法的使用
+		</p>
 	</div>
 	<script type="text/javascript">
-		function CreateNewPara() {
-			var para = document.createElement("p");//
-			var node = document.createTextNode("这是一个新段落");
-			para.appendChild(node);
-			var element=document.getElementById("div1");
-			element.appendChild(para);
-		}
+		var x = document.getElementById("main").getElementsByTagName("p");
+		alert(x.length);
+		/* for(int i=0;i<=(x.length-1);i++){
+		document.write("div中的第1个段落为："+x[i].innerHTML);
+		}  */
+
+		document.write("div中的第1个段落为：" + x[1].innerHTML);
+
+		for ( var item in x) {
+			document.write("div中的第" + item + "个段落为：" + x[item] + "</br>");
+		}//此段代码存在问题，未解决
 	</script>
 </body>
 </html>
