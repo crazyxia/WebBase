@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 本段代码主要用来测试jQuery事件 -->
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="../JS/jquery-3.2.1.min.js"></script>
+<body>
+	<input id="btn" type="button" value="只能点一次" />
+	<input id="btn2" type="text" value="哈哈" />
+</body>
+<script type="text/javascript">
+	$(function() {
+		$('#btn').bind('click', function() {
+			$(this).attr("disabled", "true");
+		})
+	});
+	$(function() {
+		$('#btn2').bind('focus', function() {
+			$(this).css("background-color", "lightpink");
+		}).bind('blur', function() {
+			$(this).css("background-color", "lightyellow");
+		});
+	});
+</script>
+</html>
