@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="../JS/jquery-3.2.1.min.js"></script>
+<body>
+	<ul>
+		<li class="fruit">Apple</li>
+		<li>Tomato</li>
+		<li class="fruit">Banana</li>
+		<li>Potato</li>
+	</ul>
+	<select id="sel" multiple="multiple">
+		<option value="0">苹果</option>
+		<option value="1" selected="selected">桔子</option>
+		<option value="2">荔枝</option>
+		<option value="3" selected="selected">葡萄</option>
+		<option value="4">香蕉</option>
+	</select>
+	<input type="button" value="删除所有" onclick="jQueryRemoveAll()" />
+	<input type="button" value="删除部分" onclick="jQueryRemove()" />
+	<input type="button" value="清空" onclick="jQueryEmpty()" />
+	<input type="button" value="内嵌" onclick="WrapInner()" />
+	<input type="button" value="外裹" onclick="Wrap()" />
+	<input type="button" value="替代" onclick="replace()" />
+	<input type="button" value="before" onclick="beforeDemo()" />
+	<input type="button" value="after" onclick="afterDemo()" />
+	<input type="button" value="clone" onclick="clone()" />
+	<script type="text/javascript">
+		console.log($('#sel :selected'));
+		function jQueryRemoveAll() {
+			$('li').remove();
+		}//刪除所有
+		function jQueryRemove() {
+			$('li').remove('.fruit');
+		}//刪除部分
+		function jQueryEmpty() {
+			$('ul').empty();//()里是作用范围 
+		}//清空
+		function WrapInner() {
+			$('li').wrapInner('<b>你好</b>');
+		}
+		function Wrap() {
+			$('li').wrap('<b>你好</b>');
+		}
+		function replace() {
+			$('.fruit').replaceWith('<b>replace测试</b>');
+		}
+		function afterDemo() {
+			$('.fruit').after('<b>after测试</b>');
+		}
+		function beforeDemo() {
+			$('.fruit').before('<b>befor测试</b>');
+		}
+		function clone() {
+			var clone_ul = $('ul').clone();
+			$('ul').after(clone_ul);
+		}
+		/* function clone() {
+			var clone_li = $('li').clone();
+			$('li').after(clone_li);//这样复制好乱2017.5.2
+		} */
+	</script>
+</body>
+</html>

@@ -14,16 +14,21 @@
 	</div>
 	<script type="text/javascript">
 		var x = document.getElementById("main").getElementsByTagName("p");
-		alert(x.length);
-		/* for(int i=0;i<=(x.length-1);i++){
-		document.write("div中的第1个段落为："+x[i].innerHTML);
-		}  */
+		/* alert(x.length);
+		 for(int i=0;i<=x.length;i++){
+		document.write("div中的第1个段落为："+x.item(i));
+		}   */
+		var length1 = x.length;
+		for (var i = 0; i <= length1 - 1; i++) {
+			document.write(x.item(i).innerHTML + "<br\>");
+		}
 
-		document.write("div中的第1个段落为：" + x[1].innerHTML);
+		/* document.write("div中的第1个段落为：" + x[1].innerHTML);
 
 		for ( var item in x) {
-			document.write("div中的第" + item + "个段落为：" + x[item] + "</br>");
+			document.write("div中的第" + item + "个段落为：" + x[item].innerHTML + "</br>");
 		}//此段代码存在问题，未解决
+		 */
 	</script>
 </body>
 </html>
