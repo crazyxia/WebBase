@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 本段代码主要用来测试jQuery事件 -->
+<!--git文件中途取消怎么处理  -->
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="../JS/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	/* 	$(function() {
+	 $('#btn2').bind('click', function() {
+	 $('#div02').animate({
+	 left : '+=200px'
+	 }, 3000);
+	 }).bind('click', function() {
+	 $('#div02').animate({
+	 right : '+=200px'
+	 }, 3000);
+	 }) */
+	$(document).ready(function() {
+		$("#btn2").click(function() {
+			$("#div02").animate({
+				right : '-=200px'
+			}, 3000).animate({
+				right : '+=200px'
+			}, 3000)
+		});
+	});
+</script>
+</script>
+<div id="div02"
+	style="position: relative; width: 24px; height: 32px; border: 1px solid red;"></div>
+<button type="button" id="btn2">向右</button>
+</script>
+<body>
+
+</body>
+</html>
